@@ -1,0 +1,10 @@
+def generate_ngarm(text,n):
+    words=text.split()
+    ngram=[]
+    for i in range(len(words)-n+1):
+        ngram.append(" ".join(words[i:i+n]))
+    return ngram
+text="hello mister what are you doing"
+n=2
+result=generate_ngarm(text,n)
+print(result)
